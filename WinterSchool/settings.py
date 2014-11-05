@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+PROJECT_PATH = os.path.dirname(os.path.dirname(
+    os.path.abspath(__file__).replace('\\', '/')
+))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -26,6 +29,16 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'winter_school',
+        'USER': 'yatzhang',
+        'PASSWORD': 'ebayZ1129',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
 
 # Application definition
 
@@ -51,9 +64,6 @@ ROOT_URLCONF = 'WinterSchool.urls'
 
 WSGI_APPLICATION = 'WinterSchool.wsgi.application'
 
-PROJECT_PATH = os.path.dirname(os.path.dirname(
-    os.path.abspath(__file__).replace('\\', '/')
-))
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
