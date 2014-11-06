@@ -11,13 +11,13 @@ For develop
 4.install mysql
 ### 
 5.create database(no need to create table)
+### 
       create database winSchool;
 ### 
 6.edit setting file
 ### 
   file path: /WinterSchool/WinterSchool/setting.py
-  
-  edit:
+### 
       DATABASES = {
             'default': {
                   'ENGINE': 'django.db.backends.mysql',
