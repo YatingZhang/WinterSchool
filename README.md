@@ -16,15 +16,16 @@ For develop
 6.edit setting file
 ### 
   file path: /WinterSchool/WinterSchool/setting.py
+  
   edit:
-  DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'winSchool',
-        'USER': 'database username',
-        'PASSWORD': 'database password',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
+      DATABASES = {
+            'default': {
+                  'ENGINE': 'django.db.backends.mysql',
+                  'NAME': 'winSchool',
+                  'USER': 'database username',
+                  'PASSWORD': 'database password',
+                  'HOST': 'localhost',
+                  'PORT': '',
+            }
+      }
 7.run 'python manage.py migrate' to set up database
