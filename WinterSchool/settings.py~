@@ -65,11 +65,11 @@ TEMPLATE_DIRS = (
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-              
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'winSchool',
+        'NAME': 'winter_school',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',
