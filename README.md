@@ -16,7 +16,7 @@ For develop
 ### 
 6.edit setting file
 ### 
-  file path: /WinterSchool/WinterSchool/setting.py
+      file path: /WinterSchool/WinterSchool/setting.py
 ### 
       DATABASES = {
             'default': {
@@ -28,4 +28,6 @@ For develop
                   'PORT': '',
             }
       }
-7.run 'python manage.py migrate' to set up database
+7.set up database
+###
+      run 'python manage.py migrate'
