@@ -7,7 +7,8 @@ For develop
 2.install python
 ### 
 3.install django 1.7
-### 
+###
+      sudo pip install Django
 4.install mysql
 ### 
 5.create database(no need to create table)
