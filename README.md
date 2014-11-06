@@ -31,3 +31,7 @@ For develop
 7.set up database
 ###
       run 'python manage.py migrate'
+8.run django project
+      python manage.py runserver 0.0.0.0:8080
+9.visiting website
+      http://0.0.0.0:8080/WinterSchool/
