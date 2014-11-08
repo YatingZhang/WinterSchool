@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/home.css">
+    <title>Winter School</title>
+    </head>
+
+  <body>
+    <div id="wrapper">
+      <div style="width: 935px; height: 198px; overflow: hidden;">
+        <img src="http://www.wsdm-conference.org/2015/wp-content/uploads/2014/09/hearder.cleaned.jpg" alt="">
+      </div>
+      <nav class="navbar navbar-default" role="navigation">
+        <!-- Collect the nav links, forms, and other content for toggling -->  
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav col-md-12">
+              <li class="col-md-3"><a href="/WinterSchool/">Home</a></li>
+              <li class="col-md-3"><a href="/WinterSchool/page1">Page1</a></li>
+              <li class="col-md-3"><a href="/WinterSchool/page2">Page2</a></li>
+          </ul>             
+        </div><!-- /.navbar-collapse -->
+      </nav>
+      {% block content %}
+      {% endblock %}
+      
+    </div>
+	
+	<script src="/static/js/jquery-1.10.2.min.js"></script>
+	<script src="/static/js/bootstrap.js"></script>
+  </body>
+</html>
