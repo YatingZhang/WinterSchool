@@ -18,3 +18,14 @@ For develop
 6.visiting website
 ###
       http://0.0.0.0:8080/WinterSchool/
+For modify
+======
+1.commit
+###
+      git commit -am 'comments'
+2.pull
+###
+      git pull origin master
+3.push
+###
+      git push origin master
