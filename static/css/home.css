@@ -4,3 +4,11 @@
 	padding: 15px 15px 0px 15px;
 	width: 965px;
 }
+body {
+	color: #525244;
+	font-family: "Lucida Sans", Lucida, Arial;
+	font-size: 16px;
+}
+.page_title{
+	color: #86865F;
+}

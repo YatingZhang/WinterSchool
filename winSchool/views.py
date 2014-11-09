@@ -6,20 +6,29 @@ def home(request):
 	return render_to_response(
 		'home.html', {}, context_instance=RequestContext(request))
 
-def page(request):
+def schedule(request):
 	return render_to_response(
-		'page.html', {}, context_instance=RequestContext(request))
+		'schedule.html', {}, context_instance=RequestContext(request))
 
-def page2(request):
+def hotel(request):
 	return render_to_response(
-		'page2.html', {}, context_instance=RequestContext(request))
+		'hotel.html', {}, context_instance=RequestContext(request))
+
+def transport(request):
+	return render_to_response(
+		'transport.html', {}, context_instance=RequestContext(request))
+
+def professor(request):
+	return render_to_response(
+		'professor.html', {}, context_instance=RequestContext(request))
+
+def download(request):
+	return render_to_response(
+		'download.html', {}, context_instance=RequestContext(request))
+
+def about(request):
+	return render_to_response(
+		'about.html', {}, context_instance=RequestContext(request))
 
 
 
-def register(request):
-    user_name=request.POST['user_name']
-    password=request.POST['pass']
-    user = User(name=user_name)
-    user.save()
-    return render_to_response(
-        'index.html',{'message':'success'}, context_instance=RequestContext(request))
