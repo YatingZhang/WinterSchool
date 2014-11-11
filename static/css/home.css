@@ -12,3 +12,7 @@ body {
 .page_title{
 	color: #86865F;
 }
+a{
+	color: #86865f;
+	text-decoration: none;
+}
