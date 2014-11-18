@@ -10,25 +10,25 @@ def schedule(request):
 	return render_to_response(
 		'schedule.html', {}, context_instance=RequestContext(request))
 
-def hotel(request):
+def accommodation(request):
 	return render_to_response(
-		'hotel.html', {}, context_instance=RequestContext(request))
+		'accommodation.html', {}, context_instance=RequestContext(request))
 
-def transport(request):
+def transportation(request):
 	return render_to_response(
-		'transport.html', {}, context_instance=RequestContext(request))
+		'transportation.html', {}, context_instance=RequestContext(request))
 
-def professor(request):
+def lectures(request):
 	return render_to_response(
-		'professor.html', {}, context_instance=RequestContext(request))
+		'lectures.html', {}, context_instance=RequestContext(request))
 
 def download(request):
 	return render_to_response(
 		'download.html', {}, context_instance=RequestContext(request))
 
-def about(request):
+def contact_us(request):
 	return render_to_response(
-		'about.html', {}, context_instance=RequestContext(request))
+		'contact_us.html', {}, context_instance=RequestContext(request))
 
 
 
