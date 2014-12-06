@@ -30,5 +30,7 @@ def contact_us(request):
 	return render_to_response(
 		'contact_us.html', {}, context_instance=RequestContext(request))
 
-
+def registration(request):
+	return render_to_response(
+		'registration.html', {}, context_instance=RequestContext(request))
 
