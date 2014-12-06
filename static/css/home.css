@@ -42,7 +42,11 @@ a{
 	color: #86865f;
 	text-decoration: none;
 }
-
+a:hover,
+a:focus {
+  color: #86865f;
+  text-decoration: underline;
+}
 #nav-menu ul li:hover > a {
 	background-color: #e2e2be;
 	text-decoration: none;
