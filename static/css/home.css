@@ -12,6 +12,9 @@ body {
 .page_title{
 	color: #86865F;
 }
+.sub_title{
+	color: #cccc9c;
+}
 .author_info{
 	border-top: 1px dashed #cccc9c;
 	padding: 5px 0px;
