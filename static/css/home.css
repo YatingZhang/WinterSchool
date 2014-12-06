@@ -51,3 +51,6 @@ a:focus {
 	background-color: #e2e2be;
 	text-decoration: none;
 }
+.form-group{
+	margin-bottom: 0px;
+}
