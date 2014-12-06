@@ -19,6 +19,7 @@ body {
 .dot_line{
 	border-bottom: 1px dashed #cccc9c;
 	padding: 3px 0px;
+	margin:0px 15px;
 }
 a{
 	color: #86865f;
