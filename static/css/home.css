@@ -42,3 +42,8 @@ a{
 	color: #86865f;
 	text-decoration: none;
 }
+
+#nav-menu ul li:hover > a {
+	background-color: #e2e2be;
+	text-decoration: none;
+}
