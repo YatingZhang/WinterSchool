@@ -17,7 +17,6 @@ urlpatterns = patterns('',
     url(r'^WinterSchool/lectures/', 'winSchool.views.lectures'),
     url(r'^WinterSchool/download/', 'winSchool.views.download'),
     url(r'^WinterSchool/contact_us/', 'winSchool.views.contact_us'),
-    url(r'^WinterSchool/registration/', 'http://www.wsdm-conference.org/2015/registration/'),
     
     
 )
