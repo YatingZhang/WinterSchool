@@ -1,13 +1,13 @@
- function initMap(markerArr, img_url){
-        createMap();//创建地图
+ function initMap(markerArr, id){
+        createMap(id);//创建地图
         setMapEvent();//设置地图事件
         addMapControl();//向地图添加控件
-        addMarker(markerArr, img_url);//向地图中添加marker
+        addMarker(markerArr);//向地图中添加marker
     }
     
     //创建地图函数：
     function createMap(){
-        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var map = new BMap.Map(id);//在百度地图容器中创建一个地图
         var point = new BMap.Point(121.428808,31.02154);//定义一个中心点坐标
         map.centerAndZoom(point,15);//设定地图的中心点和坐标并将地图显示在地图容器中
         window.map = map;//将map变量存储在全局
@@ -35,13 +35,13 @@
     }
   
     //创建marker
-    function addMarker(markerArr, img_url){
+    function addMarker(markerArr){
         for(var i=0;i<markerArr.length;i++){
             var json = markerArr[i];
             var p0 = json.point.split("|")[0];
             var p1 = json.point.split("|")[1];
             var point = new BMap.Point(p0,p1);
-			var iconImg = createIcon(json.icon, img_url);
+			var iconImg = createIcon(json.icon);
             var marker = new BMap.Marker(point,{icon:iconImg});
 			var iw = createInfoWindow(i, markerArr);
 			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
@@ -83,7 +83,7 @@
         return iw;
     }
     //创建一个Icon
-    function createIcon(json, img_url){
-        var icon = new BMap.Icon(img_url, new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
         return icon;
     }
