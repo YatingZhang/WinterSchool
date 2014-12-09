@@ -1,8 +1,8 @@
- function initMap(){
+ function initMap(markerArr, img_url){
         createMap();//创建地图
         setMapEvent();//设置地图事件
         addMapControl();//向地图添加控件
-        addMarker();//向地图中添加marker
+        addMarker(markerArr, img_url);//向地图中添加marker
     }
     
     //创建地图函数：
@@ -35,15 +35,15 @@
     }
   
     //创建marker
-    function addMarker(){
+    function addMarker(markerArr, img_url){
         for(var i=0;i<markerArr.length;i++){
             var json = markerArr[i];
             var p0 = json.point.split("|")[0];
             var p1 = json.point.split("|")[1];
             var point = new BMap.Point(p0,p1);
-			var iconImg = createIcon(json.icon);
+			var iconImg = createIcon(json.icon, img_url);
             var marker = new BMap.Marker(point,{icon:iconImg});
-			var iw = createInfoWindow(i);
+			var iw = createInfoWindow(i, markerArr);
 			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
 			marker.setLabel(label);
             map.addOverlay(marker);
@@ -55,7 +55,7 @@
 			
 			(function(){
 				var index = i;
-				var _iw = createInfoWindow(i);
+				var _iw = createInfoWindow(i,markerArr);
 				var _marker = marker;
 				_marker.addEventListener("click",function(){
 				    this.openInfoWindow(_iw);
@@ -77,13 +77,13 @@
         }
     }
     //创建InfoWindow
-    function createInfoWindow(i){
+    function createInfoWindow(i, markerArr){
         var json = markerArr[i];
         var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
         return iw;
     }
     //创建一个Icon
-    function createIcon(json){
+    function createIcon(json, img_url){
         var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
         return icon;
     }
