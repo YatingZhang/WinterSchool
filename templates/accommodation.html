@@ -65,22 +65,25 @@
   	</div>
 {% endblock %}
 
-<script src="/wsdm/winter-school/static/js/map.js"></script>
-<script type="text/javascript">  
-	 //标注点数组
-    	var markerArr = [{title:"WinterSchool&nbsp;Location",content:"Shang&nbsp;Yuan&nbsp;500",point:"121.437333|31.025547",isOpen:1,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
-		 ,{title:"JinJiang&nbsp;Inn",content:"锦江之星酒店",point:"121.429655|31.01696",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
-		 ,{title:"GreeTree&nbsp;Inn",content:"格林豪泰酒店",point:"121.434088|31.014274",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
-		 ,{title:"Hanting&nbsp;Inn",content:"汉庭酒店",point:"121.429122|31.015087",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
-		 ,{title:"Home&nbsp;Inn",content:"如家酒店",point:"121.469257|31.05324",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
-		 ,{title:"Huhua&nbsp;International&nbsp;Hotel",content:"沪华国际大酒店",point:"121.462909|31.045583",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
-		 ,{title:"Manhattan&nbsp;Hotel",content:"曼哈顿酒店",point:"121.410441|31.011652",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
-		 ,{title:"SJTU&nbsp;Academic&nbsp;Exchange&nbsp;Center",content:"交大学术交流中心",point:"121.438914|31.025524",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
-		 ];
-	initMap(markerArr,"hotel_map");//创建和初始化地图
-	
-	$("#jj").click(function(){
-		console.log("test");
-  		openLabel(1, markerArr);
-	});
-</script>
+{% block js %}
+	<script src="/wsdm/winter-school/static/js/map.js"></script>
+	<script type="text/javascript">  
+		 //标注点数组
+	    	var markerArr = [{title:"WinterSchool&nbsp;Location",content:"Shang&nbsp;Yuan&nbsp;500",point:"121.437333|31.025547",isOpen:1,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
+			 ,{title:"JinJiang&nbsp;Inn",content:"锦江之星酒店",point:"121.429655|31.01696",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
+			 ,{title:"GreeTree&nbsp;Inn",content:"格林豪泰酒店",point:"121.434088|31.014274",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
+			 ,{title:"Hanting&nbsp;Inn",content:"汉庭酒店",point:"121.429122|31.015087",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
+			 ,{title:"Home&nbsp;Inn",content:"如家酒店",point:"121.469257|31.05324",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
+			 ,{title:"Huhua&nbsp;International&nbsp;Hotel",content:"沪华国际大酒店",point:"121.462909|31.045583",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
+			 ,{title:"Manhattan&nbsp;Hotel",content:"曼哈顿酒店",point:"121.410441|31.011652",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
+			 ,{title:"SJTU&nbsp;Academic&nbsp;Exchange&nbsp;Center",content:"交大学术交流中心",point:"121.438914|31.025524",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
+			 ];
+		initMap(markerArr,"hotel_map");//创建和初始化地图
+		
+		$("#jj").click(function(){
+			console.log("test");
+	  		openLabel(1, markerArr);
+		});
+	</script>
+{% endblock %}
+
