@@ -87,3 +87,13 @@
         var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
         return icon;
     }
+    
+    function openLabel(i, markerArr){
+    	var map = window.map;
+    	var json = markerArr[i];
+        var p0 = json.point.split("|")[0];
+        var p1 = json.point.split("|")[1];
+        var point = new BMap.Point(p0,p1);
+    	var _iw = createInfoWindow(i,markerArr);
+    	map.openInfoWindow(_iw, point);
+    }
