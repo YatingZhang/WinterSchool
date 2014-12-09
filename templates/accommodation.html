@@ -23,6 +23,7 @@
 		      	<li>Address(Chinese):上海市闵行区沪闵路319号，鹤庆路口</li>
 		      	<li>contact: 021-51101999</li>
 		      	<li><a target="_blank" href="http://hotels.ctrip.com/hotel/640522.html">more information</a></li>
+		      	<li><label id="jj">click here</label>    </li>
 		      </ul>
 		      <h4 class="page_title">Greentree Inn 格林豪泰酒店</h4>
 		      <ul>
@@ -76,6 +77,11 @@
 		 ,{title:"SJTU&nbsp;Academic&nbsp;Exchange&nbsp;Center",content:"交大学术交流中心",point:"121.438914|31.025524",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
 		 ];
 	initMap(markerArr,"hotel_map");//创建和初始化地图
+	openLabel(i, markerArr)
+	
+	$("#jj").click(function(){
+  		openLabel(1, markerArr);
+	});
 </script>
 {% endblock %}
 
