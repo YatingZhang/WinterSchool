@@ -2,7 +2,7 @@
 {% block content %}
 	<div id="content">
       	<h2 class="page_title">Accommodation</h2>
-      		<p> Hotels and  Winter School site location is on the map.</p>
+      		<p> Hotels and <a id="wt" class="hint_link">Winter School site location</a> is on the map.</p>
 		<div class="row" style="width:697px;height:500px;border:#ccc solid 1px;" id="hotel_map"></div>
 		<ul class="nav nav-tabs" role="tablist">
 		  <li role="presentation" class="active"><a href="#bussiness" role="tab" data-toggle="tab">Bussiness Hotel</a></li>
@@ -88,6 +88,9 @@
 			 ];
 		initMap(markerArr,"hotel_map");//创建和初始化地图
 		
+		$("#wt").click(function(){
+	  		openLabel(1, markerArr);
+		});
 		$("#jj").click(function(){
 	  		openLabel(1, markerArr);
 		});
