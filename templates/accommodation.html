@@ -10,6 +10,14 @@
 		</ul>
 		<div class="tab-content">
 		  <div role="tabpanel" class="tab-pane active" id="bussiness">
+		      <h4 class="page_title">SJTU Academic and Activity Center 学术活动中心</h4>
+		      <ul>
+		      	<li>Address: No.800, Dongchuan Road, Minhang District, ShangHai</li>
+		      	<li>Address(Chinese):上海市闵行区东川路800号交大校区内</li>
+		      	<li>contact: 021—54740800</li>
+		      	<li><a class="hint_link" target="_blank" href="http://houqin.sjtu.edu.cn/sview.asp?id=126">more information</a></li>
+		      	<li><a id="sj">show on map</a></li>
+		      </ul>
 		      <h4 class="page_title">Hanting Inn 汉庭酒店</h4>
 		      <ul>
 		      	<li>Address: No.277, Humin Road, Minhang District, ShangHai</li>
@@ -24,7 +32,7 @@
 		      	<li>Address(Chinese):上海市闵行区沪闵路319号，鹤庆路口</li>
 		      	<li>contact: 021-51101999</li>
 		      	<li><a target="_blank" href="http://hotels.ctrip.com/hotel/640522.html">more information</a></li>
-		      	<button type="button" class="btn btn-primary" id="jj">Open modal for @mdo</button>
+		      	<li><a id="jj">show on map</a></li>
 		      </ul>
 		      <h4 class="page_title">Greentree Inn 格林豪泰酒店</h4>
 		      <ul>
@@ -32,6 +40,7 @@
 		      	<li>Address(Chinese):上海市闵行区江川东路888号，近沪闵路</li>
 		      	<li>contact: 021-51560101</li>
 		      	<li><a class="hint_link" target="_blank" href="http://hotels.ctrip.com/hotel/109011.html">more information</a></li>
+		      	<li><a id="gt">show on map</a></li>
 		      </ul>
 		      <h4 class="page_title">Home Inn 如家酒店</h4>
 		      <ul>
@@ -39,30 +48,28 @@
 		      	<li>Address(Chinese):上海市闵行区吴泾镇宝秀路977号，近永德路</li>
 		      	<li>contact: 021-64501155</li>
 		      	<li><a target="_blank" class="hint_link" href="http://hotels.ctrip.com/hotel/531698.html">more information</a></li>
+		      	<li><a id="hm">show on map</a></li>
 		      </ul>
 		  </div>
 		  <div role="tabpanel" class="tab-pane" id="star">
-		  	  <h4 class="page_title">Huhua International Hotel 沪华国际大酒店</h4>
+		      <h4 class="page_title">Huhua International Hotel 沪华国际大酒店</h4>
 		      <ul>
 		      	<li>Address: No.368 Jianchuan Road, Minhang District, Shanghai</li>
 		      	<li>Address(Chinese):上海市闵行区剑川路368号，近虹梅南路</li>
 		      	<li>contact: 021-64508999</li>
 		      	<li><a class="hint_link" target="_blank" href="http://hotels.ctrip.com/hotel/669052.html">more information</a></li>
+		      	<li><a id="hh">show on map</a></li>
 		      </ul>
 		      <h4 class="page_title">Manhattan Hotel 曼哈顿酒店</h4>
 		      <ul>
 		      	<li>Address: No.300 Heqing Road, Minhang District, Shanghai</li>
-		      	<li>Address(Chinese):上海市闵行区剑川路368号，鹤庆路900号5-6号楼，近碧江路</li>
+		      	<li>Address(Chinese):上海市闵行区鹤庆路900号5-6号楼，近碧江路</li>
 		      	<li>contact: 021-67281666</li>
 		      	<li><a class="hint_link" target="_blank" href="http://hotels.ctrip.com/hotel/1231581.html">more information</a></li>
+		      	<li><a id="mh">show on map</a></li>
 		      </ul>
 		  </div>
-
 		</div>
-
-      
-
-
   	</div>
 {% endblock %}
 
@@ -77,17 +84,30 @@
 			 ,{title:"Home&nbsp;Inn",content:"如家酒店",point:"121.469257|31.05324",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
 			 ,{title:"Huhua&nbsp;International&nbsp;Hotel",content:"沪华国际大酒店",point:"121.462909|31.045583",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
 			 ,{title:"Manhattan&nbsp;Hotel",content:"曼哈顿酒店",point:"121.410441|31.011652",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
-			 ,{title:"SJTU&nbsp;Academic&nbsp;Exchange&nbsp;Center",content:"交大学术交流中心",point:"121.438914|31.025524",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
+			 ,{title:"SJTU&nbsp;Academic&nbsp;and&nbsp;Activity&nbsp;Center",content:"学术活动中心",point:"121.438914|31.025524",isOpen:0,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
 			 ];
 		initMap(markerArr,"hotel_map");//创建和初始化地图
 		
 		$("#jj").click(function(){
-			console.log("test");
 	  		openLabel(1, markerArr);
 		});
+		$("#gt").click(function(){
+	  		openLabel(2, markerArr);
+		});
 		$("#ht").click(function(){
-			console.log("test");
 	  		openLabel(3, markerArr);
+		});
+		$("#hm").click(function(){
+	  		openLabel(4, markerArr);
+		});
+		$("#hh").click(function(){
+	  		openLabel(5, markerArr);
+		});
+		$("#mh").click(function(){
+	  		openLabel(6, markerArr);
+		});
+		$("#sj").click(function(){
+	  		openLabel(7, markerArr);
 		});
 	</script>
 {% endblock %}
