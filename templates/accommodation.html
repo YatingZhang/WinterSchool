@@ -23,7 +23,7 @@
 		      	<li>Address(Chinese):上海市闵行区沪闵路319号，鹤庆路口</li>
 		      	<li>contact: 021-51101999</li>
 		      	<li><a target="_blank" href="http://hotels.ctrip.com/hotel/640522.html">more information</a></li>
-		      	<li><label id="jj">click here</label>    </li>
+		      	<button type="button" class="btn btn-primary" id="jj">Open modal for @mdo</button>
 		      </ul>
 		      <h4 class="page_title">Greentree Inn 格林豪泰酒店</h4>
 		      <ul>
@@ -80,6 +80,7 @@
 	openLabel(i, markerArr)
 	
 	$("#jj").click(function(){
+		console.log("test");
   		openLabel(1, markerArr);
 	});
 </script>
