@@ -16,6 +16,7 @@
 		      	<li>Address(Chinese):上海市闵行区沪闵路277号，近5号线东川路地铁站</li>
 		      	<li>contact: 021-34662707</li>
 		      	<li><a  class="hint_link" target="_blank" href="http://hotels.ctrip.com/hotel/91564.html">more information</a></li>
+		      	<button type="button" class="btn btn-primary" id="ht">Open modal for @mdo</button>
 		      </ul>
 		      <h4 class="page_title">JinJiang Inn 锦江之星酒店</h4>
 		      <ul>
@@ -83,6 +84,10 @@
 		$("#jj").click(function(){
 			console.log("test");
 	  		openLabel(1, markerArr);
+		});
+		$("#ht").click(function(){
+			console.log("test");
+	  		openLabel(3, markerArr);
 		});
 	</script>
 {% endblock %}
