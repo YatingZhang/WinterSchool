@@ -1,13 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 	<div id="content">
-      <h2 class="page_title">Winter School Location</h2>
-      <p>The winter school will be held in Shang Yuan 500, located at 800 Dongchuan Road, Shanghai. </p>
-      <!--百度地图容器-->
-      <div style="width:697px;height:550px;border:#ccc solid 1px;" id="positionContent"></div>
-      <h2 class="page_title">Transportation</h2>
-      <div style="width:697px;height:550px;border:#ccc solid 1px;" id="transportContent"></div>
-  </div>
+      		<h2 class="page_title">Winter School Location</h2>
+      		<div class="passgae">
+      			<p>The winter school will be held in Shang Yuan 500, located at 800 Dongchuan Road, Shanghai. </p>
+      			<!--百度地图容器-->
+      			<div style="width:697px;height:550px;border:#ccc solid 1px;" id="positionContent"></div>
+      			<h2 class="page_title">Transportation</h2>
+      			<div style="width:697px;height:550px;border:#ccc solid 1px;" id="transportContent"></div>
+      		</div>
+  	</div>
+{% endblock %}
+
+
 <script type="text/javascript">
     //创建和初始化地图函数：
     function initMap(){
@@ -218,5 +223,3 @@
 
     initMap();//创建和初始化地图
 </script>
-
-{% endblock %}
