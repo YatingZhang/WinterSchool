@@ -42,6 +42,9 @@ body {
 	border-bottom: 1px solid #cccc9c;
 	padding: 5px 0px;
 }
+.section_noline{
+	padding: 5px 0px;
+}
 a{
 	color: #86865f;
 	text-decoration: none;
