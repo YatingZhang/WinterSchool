@@ -23,7 +23,7 @@ body {
 	color: #86865F;
 }
 .author_info{
-	border-top: 1px dashed #cccc9c;
+	border-bottom: 1px dashed #cccc9c;
 	padding: 5px 0px;
 }
 .dot_line{
