@@ -68,3 +68,7 @@ a:focus {
 	margin-right: 0px;
 	margin-left: 0px;
 }
+.panel-default > .panel-heading{
+	background-color: #ccdfbcpx;
+	padding: 5px 15px;
+}
